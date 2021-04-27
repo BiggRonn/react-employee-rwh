@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Main from "./components/Main";
 
 import Wrapper from "./components/Wrapper";
@@ -11,7 +11,7 @@ function App() {
   return (
   
       <div>
-        {/* <Navbar /> */}
+         <Header /> 
         <Wrapper>
           <Main />
         </Wrapper>
