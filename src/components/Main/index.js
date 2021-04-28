@@ -26,7 +26,11 @@ handleInputChange = (e) => {
     const input = e.target.value;
     console.log(input);
     this.setState({search: input})
-    const newArray = this.state.employees.filter(employee => employee.name.first.toLowerCase().includes(this.state.search) || employee.name.last.toLowerCase().includes(this.state.search) || employee.email.toLowerCase().includes(this.state.search) || employee.phone.toLowerCase().includes(this.state.search))
+    const newArray = this.state.employees.filter(employee => 
+        employee.name.first.toLowerCase().includes(this.state.search) || 
+        employee.name.last.toLowerCase().includes(this.state.search) || 
+        employee.email.toLowerCase().includes(this.state.search) || 
+        employee.phone.toLowerCase().includes(this.state.search))
     
     this.setState({filteredEmployees: newArray.sort((a,b) => )})
 
@@ -36,9 +40,7 @@ handleInputChange = (e) => {
     render() {return (
         <div>
             <SearchForm handleInputChange={this.handleInputChange} search={this.state.search}/>
-            {this.state.filteredEmployees.map(employee => {
-                return <p>{employee.name.first} {employee.name.last}</p>
-            })}
+            <EmployeeTable employees= {this.state.filteredEmployees}/>
         </div>
     )}
 }

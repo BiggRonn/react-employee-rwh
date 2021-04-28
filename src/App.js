@@ -12,9 +12,8 @@ function App() {
   
       <div>
          <Header /> 
-        <Wrapper>
-          <Main />
-        </Wrapper>
+        <Main />
+       
         
       </div>
   
