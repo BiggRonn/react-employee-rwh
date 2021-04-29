@@ -28,10 +28,7 @@ handleInputChange = (e) => {
     console.log(input);
     this.setState({search: input})
     const newArray = this.state.employees.filter(employee => 
-        employee.name.first.toLowerCase().includes(this.state.search) || 
-        employee.name.last.toLowerCase().includes(this.state.search) || 
-        employee.email.toLowerCase().includes(this.state.search) || 
-        employee.phone.toLowerCase().includes(this.state.search))
+        employee.name.first.toLowerCase().includes(this.state.search))
     
     this.setState({filteredEmployees: newArray.sort()})
 

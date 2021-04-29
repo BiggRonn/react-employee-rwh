@@ -8,7 +8,7 @@ function EmployeeTable({ employees }) {
  
   return (
     <Container className="d-flex justify-content-between px-4">
-      <Table striped border>
+      <Table striped bordered>
         <thead>
           <tr>
             <th></th>
