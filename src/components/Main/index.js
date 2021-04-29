@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import SearchForm from '../SearchForm'
+import EmployeeTable from '../EmployeeTable'
 
 
 class Main extends React.Component{
@@ -32,7 +33,7 @@ handleInputChange = (e) => {
         employee.email.toLowerCase().includes(this.state.search) || 
         employee.phone.toLowerCase().includes(this.state.search))
     
-    this.setState({filteredEmployees: newArray.sort((a,b) => )})
+    this.setState({filteredEmployees: newArray.sort()})
 
 }
 
