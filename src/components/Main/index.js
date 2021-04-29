@@ -23,10 +23,10 @@ getEmployees = async () =>{
 
 }
 //anytime our search field changes we will get a new array of any matching names
-handleInputChange = (e) => {
+handleInputChange = async (e) => {
     const input = e.target.value;
     console.log(input);
-    this.setState({search: input})
+    await this.setState({search: input})
     const newArray = this.state.employees.filter(employee => 
         employee.name.first.toLowerCase().includes(this.state.search))
     
