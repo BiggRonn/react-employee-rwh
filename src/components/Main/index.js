@@ -28,7 +28,7 @@ handleInputChange = async (e) => {
     console.log(input);
     await this.setState({search: input})
     const newArray = this.state.employees.filter(employee => 
-        employee.name.first.toLowerCase().includes(this.state.search))
+        employee.name.first.toLowerCase().startsWith(this.state.search))
     
     this.setState({filteredEmployees: newArray.sort((a,b) => a.name.first.toLowerCase().localeCompare(b.name.first.toLowerCase()))})
 
