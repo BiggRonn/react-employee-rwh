@@ -2,13 +2,13 @@ import React from "react";
 import { Container, Table } from "react-bootstrap";
 
 
-
+//for body of table, we iterate over our employees array to return a table row for each employee
 
 function EmployeeTable({ employees }) {
  
   return (
-    <Container>
-      <Table>
+    <Container className="d-flex justify-content-between px-4">
+      <Table striped border>
         <thead>
           <tr>
             <th></th>
@@ -22,11 +22,11 @@ function EmployeeTable({ employees }) {
           {employees.map(employee => {
             return(
           <tr key={employee.email}>
-            <td><img src={employee.image} alt="Employee"/></td>
+            <td><img src={employee.picture.thumbnail} alt="Employee"/></td>
             <td>{employee.name.first} {employee.name.last}</td>
             <td>{employee.phone}</td>
             <td>{employee.email}</td>
-            <td></td>
+            <td>{employee.dob.date.substring(0,10)}</td>
           </tr>
             )
           })}
